@@ -1,1 +1,1 @@
-# copernicus-images
+Scripts for running Copernicus and tutorials.
