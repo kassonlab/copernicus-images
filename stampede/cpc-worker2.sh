@@ -5,7 +5,7 @@
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=16
 #SBATCH --export=ALL
-#SBATCH -t 00:10:00
+#SBATCH -t 01:00:00
 
 
 module load gromacs
