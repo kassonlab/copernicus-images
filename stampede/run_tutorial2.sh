@@ -1,5 +1,13 @@
 #!/bin/bash
+# Code 2015 by Peter Kasson
 # Call this with a directory of structures and a single topology
+if [ $# -lt 2 ]; then
+    echo "Usage:"
+    echo "$0 structures topology"
+    exit 1
+fi
+
+
 export SERVER=`grep tacc ~/local_bundle.cnx |cut -f4 -d\"`
 cpcc login cpc-admin
 cpcc start md_simulations_test2
