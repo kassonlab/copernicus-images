@@ -6,12 +6,15 @@
 #PBS -V
 #PBS -l walltime=02:00:00
 
-module load gromacs
 module load bwpy
+# module load gromacs
+# kludge to use static pre-build gromacs binaries
+export PATH=$PATH:/u/training/instr015/bin
 
 export CPC_DATA=$HOME/cpc-data
 export CPC_HOME=$HOME/copernicus
 export PATH=$PATH:$CPC_HOME
-cpc-server start
+aprun cpc-server start
 cpc-server bundle -o local_bundle.cnx
-sleep 172800  # 48 hours
+sleep 172800
+# 48 hours

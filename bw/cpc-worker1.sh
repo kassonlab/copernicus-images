@@ -7,8 +7,11 @@
 #PBS -l walltime=01:40:00
 
 
-module load gromacs
 module load bwpy
+# module load gromacs
+# static location
+export PATH=$PATH:/u/training/instr015/bin
+
 export MPIRUN=aprun
 export CPC_DATA=$HOME/cpc-data
 export CPC_HOME=$HOME/copernicus
