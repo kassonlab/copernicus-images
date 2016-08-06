@@ -11,4 +11,7 @@ module load bwpy  # Blue Waters python packages
 export PATH=$PATH:/u/training/instr015/bin
 
 cpc-server setup $CPC_DATA
+pushd `pwd`
+cd $CPC_HOME
 tar zxvf $CPC_HOME/examples/msm/msmbuilder-known-good.tar.gz
+popd

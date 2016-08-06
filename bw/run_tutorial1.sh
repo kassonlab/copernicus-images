@@ -1,5 +1,5 @@
 #!/bin/bash
-export SERVER=`grep nid ~/local_bundle.cnx |cut -f4 -d\"`
+export SERVER=`grep nid ~/local_bundle2.cnx |cut -f4 -d\"`
 cpcc add-server $SERVER
 cpcc login cpc-admin
 cpcc start md_simulations_test
