@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CPC_DATA=$WORK/cpc-data
+export CPC_DATA=$HOME/cpc-data
 export CPC_HOME=$HOME/copernicus
 export PATH=$PATH:$CPC_HOME
 export PYTHONPATH=$PYTHONPATH:$HOME
