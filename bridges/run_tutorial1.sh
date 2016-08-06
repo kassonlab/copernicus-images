@@ -1,5 +1,5 @@
 #!/bin/bash
-export SERVER=`grep bridges ~/local_bundle.cnx |cut -f4 -d\"`
+export SERVER=`grep bridges local_bundle.cnx |cut -f4 -d\"`
 cpcc add-server $SERVER
 cpcc login cpc-admin
 cpcc start md_simulations_test
