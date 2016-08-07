@@ -9,7 +9,7 @@
 # kludge because we have gmx_mpi but no gmx on bridges
 # module load gromacs
 export PATH=$PATH:/home/kasson/bin
-module load python2/2.7.11_gcc_np1.11
+module load anaconda
 # module load hdf5
 
 export CPC_DATA=$HOME/cpc-data
