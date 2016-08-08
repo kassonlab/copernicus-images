@@ -10,12 +10,12 @@
 # module load gromacs
 export PATH=$PATH:/home/kasson/bin
 module load anaconda
-# module load hdf5
+module load hdf5
 
 export CPC_DATA=$HOME/cpc-data
 export CPC_HOME=$HOME/copernicus
 export PATH=$PATH:$CPC_HOME
-export PYTHONPATH=$PYTHONPATH:$CPC_HOME
+export PYTHONPATH=$PYTHONPATH:$HOME:$CPC_HOME
 cpc-server start
 cpc-server bundle -o local_bundle.cnx
 sleep 172800  # 48 hours

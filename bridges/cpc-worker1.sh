@@ -17,5 +17,5 @@ export CPC_HOME=$HOME/copernicus
 export CPC_TEMP=$HOME/worker_$SLURM_JOB_ID
 export PATH=$PATH:$CPC_HOME
 mkdir $CPC_TEMP
-cpc-worker -d -c local_bundle.cnx -wd $CPC_TEMP -q 20 mpi -n 56
+cpc-worker -d -c local_bundle.cnx -wd $CPC_TEMP -q 20 mpi -n 28
 rm -r $CPC_TEMP
