@@ -5,7 +5,7 @@
 #SBATCH --nodes=1
 #SBATCH --export=ALL
 #SBATCH -t 24:00:00
-#SBATCH -A unc104
+#SBATCH -A anl112
 
 module load gromacs
 export CPC_DATA=/oasis/scratch/comet/$USER/temp_project/cpc-data

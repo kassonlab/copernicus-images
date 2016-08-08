@@ -6,7 +6,7 @@
 #SBATCH --ntasks-per-node=24
 #SBATCH --export=ALL
 #SBATCH -t 12:00:00
-#SBATCH -A unc104
+#SBATCH -A anl112
 
 module load gromacs
 export MPIRUN=ibrun
