@@ -6,7 +6,7 @@
 #SBATCH --export=ALL
 #SBATCH -t 2:00:00
 
-if [$SERVER_PORT == '']; then
+if [ "$SERVER_PORT" == "" ]; then
     export SERVER_PORT=13807
     export CLIENT_PORT=14807
 fi

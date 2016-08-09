@@ -1,6 +1,6 @@
 #!/bin/bash
 export SERVER=`grep nid ~/local_bundle2.cnx |cut -f4 -d\"`
-cpcc add-server $SERVER
+cpcc add-server $SERVER $SERVER_PORT
 cpcc login cpc-admin
 cpcc start md_simulations_test
 cpcc import gromacs

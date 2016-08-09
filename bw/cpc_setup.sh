@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# MODIFY THIS SECTION IF RUNNING ON SHARED NODES
+export SERVER_PORT=13807
+export CLIENT_PORT=14807
+
 export CPC_DATA=$HOME/cpc-data
 export CPC_HOME=$HOME/copernicus
 export PATH=$PATH:$CPC_HOME
