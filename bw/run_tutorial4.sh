@@ -11,14 +11,14 @@ cpcc activate
 cpcc transact
 # set its values. 
 # Descriptions can be obtained with cpcc info msm::msm_mgx_adaptive
-cpcc setf msm:in.grompp.top copernicus/examples/msm/alanine-dipeptide-msm/topol.top
-cpcc setf msm:in.grompp.mdp copernicus/examples/msm/alanine-dipeptide-msm/grompp.mdp
+cpcc setf msm:in.grompp.top $HOME/copernicus/examples/msm/alanine-dipeptide-msm/topol.top
+cpcc setf msm:in.grompp.mdp $HOME/copernicus/examples/msm/alanine-dipeptide-msm/grompp.mdp
 
 # starting configurations
-cpcc setf msm:in.confs[+] copernicus/examples/msm/alanine-dipeptide-msm/equil0.gro
-cpcc setf msm:in.confs[+] copernicus/examples/msm/alanine-dipeptide-msm/equil1.gro
-cpcc setf msm:in.confs[+] copernicus/examples/msm/alanine-dipeptide-msm/equil2.gro
-cpcc setf msm:in.confs[+] copernicus/examples/msm/alanine-dipeptide-msm/equil3.gro
+cpcc setf msm:in.confs[+] $HOME/copernicus/examples/msm/alanine-dipeptide-msm/equil0.gro
+cpcc setf msm:in.confs[+] $HOME/copernicus/examples/msm/alanine-dipeptide-msm/equil1.gro
+cpcc setf msm:in.confs[+] $HOME/copernicus/examples/msm/alanine-dipeptide-msm/equil2.gro
+cpcc setf msm:in.confs[+] $HOME/copernicus/examples/msm/alanine-dipeptide-msm/equil3.gro
 
 # re-clustering frequency(ns)
 cpcc set msm:in.recluster 1.0
