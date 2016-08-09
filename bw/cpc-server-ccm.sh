@@ -22,6 +22,7 @@ export PMI_NO_PREINITIALIZE=1
 module load ccm
 ccmrun cpc-server start -dev &
 ccmrun ip addr show ipogif0 |egrep -v Application| tail -1 |awk '{print $2}' |awk -F / '{print $1}' > servername.txt
-ccmrun cpc-server bundle -o local_bundle2.cnx
+ccmmrun ip addr show ipogif0
+ccmrun cpc-server bundle -o local_bundle3.cnx
 sleep 172800
 # 48 hours
