@@ -11,11 +11,12 @@
 export PATH=$PATH:/home/kasson/bin
 # module load gromacs
 module load python
+module load mpi/intel_mpi
 export MPIRUN=mpirun
 export CPC_DATA=$HOME/cpc-data
 export CPC_HOME=$HOME/copernicus
 export CPC_TEMP=$HOME/worker_$SLURM_JOB_ID
 export PATH=$PATH:$CPC_HOME
 mkdir $CPC_TEMP
-cpc-worker -d -c local_bundle.cnx -wd $CPC_TEMP -q 20 mpi -n 28
+cpc-worker -d -c local_bundle.cnx -wd $CPC_TEMP -q 20 mpi -n 14
 rm -r $CPC_TEMP

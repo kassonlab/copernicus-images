@@ -1,5 +1,5 @@
 #!/bin/bash
-if [$SERVER_PORT == '']; then
+if [ "$SERVER_PORT" == "" ]; then
     export CLIENT_PORT=14807
 fi
 
