@@ -2,8 +2,13 @@
 #PBS -N cpc_server
 #PBS -l nodes=1:ppn=16:xe
 #PBS -V
-#PBS -l walltime=01:00:00
-#PBS -l gres=ccm
+#PBS -l walltime=02:00:00
+
+if [ "$SERVER_PORT" == "" ]; then
+    export SERVER_PORT=13807
+    export CLIENT_PORT=14807
+fi
+
 
 module load bwpy
 # module load gromacs
@@ -15,14 +20,10 @@ export CPC_DATA=$HOME/cpc-data
 export CPC_HOME=$HOME/copernicus
 export PATH=$PATH:$CPC_HOME
 export PYTHONPATH=$PYTHONPATH:$HOME:$CPC_HOME
-
-export PMI_NO_FORK=1
-export PMI_NO_PREINITIALIZE=1
-
-module load ccm
-ccmrun cpc-server start -dev &
-ccmrun ip addr show ipogif0 |egrep -v Application| tail -1 |awk '{print $2}' |awk -F / '{print $1}' > servername.txt
-ccmmrun ip addr show ipogif0
-ccmrun cpc-server bundle -o local_bundle2.cnx
+aprun hostname
+cpc-server start
+cpc-server config server_secure_port $SERVER_PORT
+cpc-server config client_secure_port $CLIENT_PORT 
+cpc-server bundle -o local_bundle2.cnx
 sleep 172800
 # 48 hours

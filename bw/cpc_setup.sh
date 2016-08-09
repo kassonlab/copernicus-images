@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# MODIFY THIS SECTION IF RUNNING ON SHARED NODES
+# can use defaults now
 export SERVER_PORT=13807
 export CLIENT_PORT=14807
 
