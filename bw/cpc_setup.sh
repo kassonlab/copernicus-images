@@ -12,7 +12,7 @@ module load bwpy  # Blue Waters python packages
 # module load gromacs
 # no BW modules for gromacs
 # instead kludge:
-export PATH=$PATH:/u/training/instr015/bin
+export PATH=$PATH:/u/training/instr010/bin
 
 cpc-server setup $CPC_DATA
 pushd `pwd`

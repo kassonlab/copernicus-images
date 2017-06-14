@@ -10,7 +10,7 @@
 module load bwpy
 # module load gromacs
 # static location
-export PATH=$PATH:/u/training/instr015/bin
+export PATH=$PATH:/u/training/instr010/bin
 
 export MPIRUN=aprun
 export CPC_DATA=$HOME/cpc-data
