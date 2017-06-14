@@ -7,8 +7,7 @@ if [ $# -lt 2 ]; then
     exit 1
 fi
 
-
-export SERVER=`grep nid ~/local_bundle2.cnx |cut -f4 -d\"`
+export SERVER=`grep client_host ~/local_bundle2.cnx |cut -d\" -f4`
 cpcc login cpc-admin
 cpcc start md_simulations_test2
 cpcc import gromacs
