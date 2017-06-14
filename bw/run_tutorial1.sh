@@ -1,6 +1,6 @@
 #!/bin/bash
-export SERVER=`cat ~/servername.txt`
-cpcc add-server $SERVER $SERVER_PORT
+export SERVER=`grep client_host ~/local_bundle2.cnx |cut -d\" -f4`
+cpcc add-server $SERVER 14807
 cpcc login cpc-admin
 cpcc start md_simulations_test
 cpcc import gromacs
